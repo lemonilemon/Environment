@@ -2,6 +2,7 @@
 mkcd() {  
 	mkdir -p -- "${1}" && cd "${1}"
 }
+export -f mkcd
 # cpp
 # compile with name
 g+++ () {
@@ -30,6 +31,7 @@ g+++ () {
 	echo "Done!"
 	return 0
 }
+export -f g+++
 # compile with name & run
 grun() {
 	file=$1
@@ -40,6 +42,7 @@ grun() {
 	g+++ $file $comments && clear && ./${build}/${name}
 	return 0
 }
+export -f grun
 # all program
 Compilerun() {
 	file=$1
@@ -56,3 +59,4 @@ Compilerun() {
 			;;
 	esac
 }
+export -f Compilerun

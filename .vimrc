@@ -101,3 +101,10 @@ filetype plugin on
 			"" vue.js
 				let g:syntastic_vue_checkers = ['eslint'] 
 		"" Compiling & Running
+			"" Functions
+				func! Run()
+					exec "w"
+					exec "!Compilerun %:t"
+				endfunc
+			"" Setting
+				nmap <F9> :call Run()<CR>
