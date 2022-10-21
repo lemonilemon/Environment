@@ -97,14 +97,19 @@ filetype plugin on
 			"" js 
 				let g:syntastic_javascript_checkers = ['eslint']
 			"" shell script
-				"" let g:syntastic_sh_checkers = ['shellcheck'] "" let g:syntastic_sh_shellcheck_thres = 1
+				"" let g:syntastic_sh_checkers = ['shellcheck']
 			"" vue.js
 				let g:syntastic_vue_checkers = ['eslint'] 
-		"" Compiling & Running
-			"" Functions
+"" Compiling & Running
+	"" Functions
 				func! Run()
 					exec "w"
 					exec "!Compilerun %:t"
 				endfunc
-			"" Setting
+	"" Setting
 				nmap <F9> :call Run()<CR>
+"" Skeleton
+	"" py
+		autocmd BufNewFile *.py 0r ~/.vim/skeleton/skeleton.py
+	"" cpp
+		autocmd BufNewFile *.cpp 0r ~/.vim/skeleton/skeleton.cpp
