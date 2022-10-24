@@ -1,5 +1,6 @@
 #include <bits/stdc++.h>
 #pragma GCC optimize("Ofast")
+#define local
 #ifdef local
 using std::cerr;
 #define debug(arg) deone(#arg, arg) 
@@ -22,6 +23,14 @@ void safe() {
 #endif // local
 using namespace std;
 
+void init() {
+	return;
+}
+
+void reset() {
+	return;
+}
+
 void solve() {
 
 }
@@ -29,10 +38,12 @@ void solve() {
 int main() {
 	ios::sync_with_stdio(0);
 	cin.tie(0);
+	init();
 	int T = 1;
 	//cin >> T;
 	for(int t = 1; t <= T; ++t) {
 		//cout << "Case " << t << ": ";
+		reset();
 		solve();
 	}
 }
