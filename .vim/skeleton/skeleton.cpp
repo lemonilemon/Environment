@@ -22,14 +22,7 @@ void safe() {
 #define orange(...) ((void)0)
 #endif // local
 using namespace std;
-
-void init() {
-	return;
-}
-
-void reset() {
-	return;
-}
+using ll = long long int;
 
 void solve() {
 
@@ -38,12 +31,10 @@ void solve() {
 int main() {
 	ios::sync_with_stdio(0);
 	cin.tie(0);
-	init();
 	int T = 1;
 	//cin >> T;
 	for(int t = 1; t <= T; ++t) {
 		//cout << "Case " << t << ": ";
-		reset();
 		solve();
 	}
 }
