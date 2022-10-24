@@ -119,6 +119,6 @@ export PATH="$HOME/.local/bin:$PATH"
 if [ -f ~/.bash/.bash_aliases ]; then
     . ~/.bash/.bash_aliases
 fi
-if [ -f ~/.bash_func ]; then
+if [ -f ~/.bash/.bash_func ]; then
     . ~/.bash/.bash_func
 fi

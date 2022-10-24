@@ -5,8 +5,8 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin() 
 " alternatively, pass a path where Vundle should install plugins "call vundle#begin('~/some/path/here')
 
-" let Vundle manage Vundle, required Plugin 'VundleVim/Vundle.vim'
-
+" let Vundle manage Vundle, required
+Plugin 'VundleVim/Vundle.vim'
 " The following are examples of different formats supported. " Keep Plugin commands between vundle#begin/end. 
 Plugin 'fcpg/vim-farout' 
 Plugin 'scrooloose/nerdtree' 
@@ -37,9 +37,16 @@ filetype plugin on
 		set autochdir 
 		set autowrite 
 		set nobackup
+"" delays
+	"" Setting
+		set timeout ttimeout " separte mapping and keycode time
+		set timeoutlen=500 " 500ms
+		set ttimeoutlen=20 " 20ms
 "" Style 
 	"" Setting
+		syntax enable
 		set background=dark 
+		let g:solarized_termcolors=256
 		colorscheme farout 
 		set cursorline 
 		hi CursorLine cterm=underline
@@ -54,11 +61,13 @@ filetype plugin on
 				endif 
 			return ''
 		endfunc
-"" Indentation "" Setting
+"" Indentation 
+	"" Setting
 		set tabstop=4 
 		set shiftwidth=4 
 		set smartindent
-"" Line number "" Setting
+"" Line number 
+	"" Setting
 		set number 
 		augroup numbertoggle
 			autocmd! 
@@ -79,21 +88,21 @@ filetype plugin on
 			set statusline+=%{SyntasticStatuslineFlag()} 
 			set statusline+=%* 
 			let g:syntastic_error_symbol = "✗" 
-			let g:syntastic_warning_symbol = "⚠""
-			let g:syntastic_style_error_symbol = '!'
+			let g:syntastic_warning_symbol = "!"
+			let g:syntastic_style_error_symbol = '?'
 			let g:syntastic_style_warning_symbol = '?'
 			let g:syntastic_aggregate_errors = 1
 			let g:syntastic_always_populate_loc_list = 1 
 			let g:syntastic_auto_loc_list = 1 
 			let g:syntastic_check_on_open = 1 
 			let g:syntastic_check_on_wq = 0 
-			let g:syntastic_enable_highlighting = 0
+			let g:syntastic_enable_highlighting = 1
 		"" Checker 
 			"" cpp
 				let g:syntastic_cpp_checkers = ['cpplint', 'gcc'] 
 				"" let g:syntastic_cpp_cpplint_exec = 'cpplint' 
 				let g:syntastic_cpp_compiler_options = "-std=c++2a -Wall -Wextra -Wpedantic" 
-				let g:syntastic_cpp_cpplint_thres = 1
+				let g:syntastic_cpp_cpplint_thres = 1 
 			"" js 
 				let g:syntastic_javascript_checkers = ['eslint']
 			"" shell script
