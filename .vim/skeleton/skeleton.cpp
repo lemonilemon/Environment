@@ -23,14 +23,20 @@ void safe() {
 #endif // local
 using namespace std;
 using ll = long long int;
+FILE* setIO(string file = "") {
+	ios::sync_with_stdio(0);
+	cin.tie(0);
+	if(file.empty()) return NULL;
+	if(freopen((file + ".in").c_str(), "r", stdin) == NULL) return NULL; 
+	return freopen((file + ".out").c_str(), "w", stdout);
+}
 
 void solve() {
 
 }
 
 int main() {
-	ios::sync_with_stdio(0);
-	cin.tie(0);
+	setIO();
 	int T = 1;
 	//cin >> T;
 	for(int t = 1; t <= T; ++t) {

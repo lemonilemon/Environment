@@ -42,6 +42,10 @@ filetype plugin on
 		set timeout ttimeout " separte mapping and keycode time
 		set timeoutlen=500 " 500ms
 		set ttimeoutlen=20 " 20ms
+"" Sound
+	""Setting
+		set visualbell
+		set t_vb=
 "" Style 
 	"" Setting
 		syntax enable
