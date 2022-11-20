@@ -37,6 +37,7 @@ filetype plugin on
 		set autochdir 
 		set autowrite 
 		set nobackup
+		set clipboard=unnamedplus
 "" delays
 	"" Setting
 		set timeout ttimeout " separte mapping and keycode time
